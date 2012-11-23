@@ -1,3 +1,3 @@
 public class First {
-    int var = 0;
+    int var = 1;
 }
