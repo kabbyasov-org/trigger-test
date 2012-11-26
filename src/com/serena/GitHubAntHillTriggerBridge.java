@@ -83,7 +83,7 @@ public final class GitHubAntHillTriggerBridge extends HttpServlet {
 
             // handle response here...
         } catch (Exception ex) {
-            // handle exception here
+            // handle exceptio n here
         } finally {
             httpClient.getConnectionManager().shutdown();
         }
