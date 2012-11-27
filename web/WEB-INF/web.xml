@@ -15,4 +15,16 @@
         <url-pattern>/trigger</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>log4j-init</servlet-name>
+        <servlet-class>com.serena.Log4jInit</servlet-class>
+
+        <init-param>
+            <param-name>log4j-init-file</param-name>
+            <param-value>WEB-INF/log4j.properties</param-value>
+        </init-param>
+
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
 </web-app>     

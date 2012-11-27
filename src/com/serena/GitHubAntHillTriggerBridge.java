@@ -6,11 +6,11 @@ import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.DefaultHttpClient;
 
+import org.apache.log4j.Logger;
 import org.json.simple.*;
 import org.json.simple.parser.*;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -23,8 +23,10 @@ import javax.servlet.http.HttpServletResponse;
 
 public final class GitHubAntHillTriggerBridge extends HttpServlet {
 
-    private static final String JSON_PROPERTY_REPOSITORY_URL = "repo_url";
-    private static final String JSON_PROPERTY_REPOSITORY_BRANCH = "ref";
+    static private final Logger log = Logger.getLogger(GitHubAntHillTriggerBridge.class);
+
+    private static final String JSON_PROPERTY_REPOSITORY_URL = "url";
+    private static final String JSON_PROPERTY_BRANCH = "ref";
     private static final String JSON_PROPERTY_REPOSITORY = "repository";
     private static final String PAYLOAD_REQUEST_PARAM_NAME = "payload";
     //    private static final String ANTHILL_TRIGGER_URL = "http://orl-sra-cmt1:9095";
@@ -35,6 +37,17 @@ public final class GitHubAntHillTriggerBridge extends HttpServlet {
     private String ghBranch = "";
     private String ghPayload = "";
 
+    private void logDebug(String message) {
+            log.debug(message);
+    }
+
+    private void logError(String message, Exception ex) {
+        log.error(message, ex);
+    }
+
+    private void logInfo(String message) {
+        log.info(message);
+    }
 
     private String getGitHubRepositoryUrl() throws Exception {
         String retval = "";
@@ -42,16 +55,14 @@ public final class GitHubAntHillTriggerBridge extends HttpServlet {
         if (null != repository) {
             retval = (null != repository.get(JSON_PROPERTY_REPOSITORY_URL)) ? (String) repository.get(JSON_PROPERTY_REPOSITORY_URL) : "";
         }
+        logDebug("GitHub repository url(already parsed):" + retval);
         return retval;
     }
 
     private String getGitHubBranch() throws Exception {
-        String retval = "";
-        JSONObject repository = (JSONObject) getMainJSONObject().get(JSON_PROPERTY_REPOSITORY);
-        if (null != repository) {
-            retval = (null != repository.get(JSON_PROPERTY_REPOSITORY_URL)) ? (String) repository.get(JSON_PROPERTY_REPOSITORY_URL) : "";
-        }
-        return retval;
+        String retval = (String) getMainJSONObject().get(JSON_PROPERTY_BRANCH);
+        logDebug("GitHub branch (already parsed):" + retval);
+        return (null != retval) ? retval : "";
     }
 
     private void parseGHPayload() throws Exception {
@@ -60,11 +71,15 @@ public final class GitHubAntHillTriggerBridge extends HttpServlet {
     }
 
     private String getRepositoryUrlForAH() throws Exception {
-        return getGitHubRepositoryUrl().replaceFirst("https://", "").replaceFirst("http://", "");
+        String retval = getGitHubRepositoryUrl().replaceFirst("https://", "").replaceFirst("http://", "");
+        logDebug("Repository url for AntHill (ready to send):" + retval);
+        return retval;
     }
 
     private String getBranchForAH() throws Exception {
-        return getGitHubBranch().replaceFirst("refs/heads/", "");
+        String retval = getGitHubBranch().replaceFirst("refs/heads/", "");
+        logDebug("Branch for AntHill (ready to send):" + retval);
+        return retval;
     }
 
     private JSONObject getMainJSONObject() throws Exception {
@@ -83,7 +98,7 @@ public final class GitHubAntHillTriggerBridge extends HttpServlet {
 
             // handle response here...
         } catch (Exception ex) {
-            // handle exceptio n here
+            logError("Error sending request to AntHill", ex);
         } finally {
             httpClient.getConnectionManager().shutdown();
         }
@@ -93,6 +108,7 @@ public final class GitHubAntHillTriggerBridge extends HttpServlet {
         String retval = "code=" + ANTHILL_TRIGGER_CODE;
         retval += "&repo=" + getRepositoryUrlForAH();
         retval += "&branch=" + getBranchForAH();
+        logDebug("AntHill ready request string:" + retval);
         return retval;
     }
 
@@ -108,23 +124,21 @@ public final class GitHubAntHillTriggerBridge extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         ghPayload = request.getParameter(PAYLOAD_REQUEST_PARAM_NAME);
+        logDebug("GitHub payload message:" + ghPayload);
+
         if (!"".equals(ghPayload)) {
             try {
                 parseGHPayload();
-                if (!"".equals(ghRepositoryUrl) && !"".equals(ghBranch)) {
-                    notifyAH();
-                }
+//                writer.println(ghRepositoryUrl);
+//                writer.println(ghBranch);
             } catch (Exception e) {
-                response.setContentType("text/html");
-                PrintWriter writer = response.getWriter();
-                writer.println("<html>");
-                writer.println("<head>");
-                writer.println("</head>");
-                writer.println("<body bgcolor=white>");
-                writer.println(e.getStackTrace());
-                writer.println("</body>");
-                writer.println("</html>");
+                logError("Error parsing request from GitHub", e);
             }
+
+            if (!"".equals(ghRepositoryUrl) && !"".equals(ghBranch)) {
+                notifyAH();
+            }
+
         }
 
 //        response.setContentType("text/html");
