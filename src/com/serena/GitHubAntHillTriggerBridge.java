@@ -95,7 +95,7 @@ public final class GitHubAntHillTriggerBridge extends HttpServlet {
             request.addHeader("content-type", "application/x-www-form-urlencoded");
             request.setEntity(params);
             HttpResponse response = httpClient.execute(request);
-            logDebug("AntHill Response Status code: " + (null != response ? response.getStatusLine().getStatusCode() : "unknown"));
+            logDebug("AntHill  Response Status code: " + (null != response ? response.getStatusLine().getStatusCode() : "unknown"));
 
         } catch (Exception ex) {
             logError("Error sending request to AntHill", ex);
