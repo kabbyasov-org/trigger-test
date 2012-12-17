@@ -30,7 +30,7 @@ public final class GitHubAntHillTriggerBridge extends HttpServlet {
     private static final String JSON_PROPERTY_REPOSITORY = "repository";
     private static final String PAYLOAD_REQUEST_PARAM_NAME = "payload";
     //    private static final String ANTHILL_TRIGGER_URL = "http://orl-sra-cmt1:9095";
-    private static final String ANTHILL_TRIGGER_URL = "http://requestb.in/1cnnlg71";
+    private static final String ANTHILL_TRIGGER_URL = "http://requestb.in/1dnqnl51";
     private static final String ANTHILL_TRIGGER_CODE = "d4297a0273899617978517793b6d28eab9f84f9e";
 
     private String ghRepositoryUrl = "";
@@ -125,6 +125,7 @@ public final class GitHubAntHillTriggerBridge extends HttpServlet {
 
         ghPayload = request.getParameter(PAYLOAD_REQUEST_PARAM_NAME);
         logDebug("GitHub payload message:" + ghPayload);
+        System.out.println("Got request: " + ghPayload);
 
         if (!"".equals(ghPayload)) {
             try {
