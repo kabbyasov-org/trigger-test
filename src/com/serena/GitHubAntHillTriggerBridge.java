@@ -71,7 +71,7 @@ public final class GitHubAntHillTriggerBridge extends HttpServlet {
     }
 
     private String getRepositoryUrlForAH() throws Exception {
-        String retval = getGitHubRepositoryUrl().replaceFirst("https://", "").replaceFirst("http://", "");
+        String retval = getGitHubRepositoryUrl().replaceFirst("https://", "").replaceFirst("http://", "").concat(".git");
         logDebug("Repository url for AntHill (ready to send):" + retval);
         return retval;
     }
