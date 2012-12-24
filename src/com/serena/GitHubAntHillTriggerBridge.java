@@ -138,7 +138,7 @@ public final class GitHubAntHillTriggerBridge extends HttpServlet {
 
             if (!"".equals(ghRepositoryUrl) && !"".equals(ghBranch)) {
                 try {
-                    int sleepTimeoutValue = 15;
+                    int sleepTimeoutValue = 60;
                     logDebug("Sleeping for " + sleepTimeoutValue + " seconds before notifying AntHill...");
                     Thread.sleep(sleepTimeoutValue * 1000);
                 } catch (InterruptedException e) {
