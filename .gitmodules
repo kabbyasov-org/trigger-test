@@ -2,6 +2,3 @@
 	path = test3
 	url = https://github.com/kabbyasov-org/test2.git
 
-[submodule "test2"]
-	path = test2
-	url = https://github.com/kabbyasov-org/test2.git
