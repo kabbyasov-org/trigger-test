@@ -11,6 +11,31 @@
       <properties />
     </buildFile>
   </component>
+  <component name="ArtifactManager">
+    <artifact type="exploded-war" build-on-make="true" name="trigger-test:war exploded">
+      <output-path>$PROJECT_DIR$/out/artifacts/trigger_test_war_exploded</output-path>
+      <root id="root">
+        <element id="directory" name="WEB-INF">
+          <element id="directory" name="classes">
+            <element id="module-output" name="trigger-test" />
+          </element>
+          <element id="directory" name="lib">
+            <element id="library" level="application" name="tomcat libs" />
+            <element id="file-copy" path="$PROJECT_DIR$/web/WEB-INF/lib/commons-codec-1.6.jar" />
+            <element id="file-copy" path="$PROJECT_DIR$/web/WEB-INF/lib/commons-logging-1.1.1.jar" />
+            <element id="file-copy" path="$PROJECT_DIR$/web/WEB-INF/lib/fluent-hc-4.2.2.jar" />
+            <element id="file-copy" path="$PROJECT_DIR$/web/WEB-INF/lib/httpclient-4.2.2.jar" />
+            <element id="file-copy" path="$PROJECT_DIR$/web/WEB-INF/lib/httpclient-cache-4.2.2.jar" />
+            <element id="file-copy" path="$PROJECT_DIR$/web/WEB-INF/lib/httpcore-4.2.2.jar" />
+            <element id="file-copy" path="$PROJECT_DIR$/web/WEB-INF/lib/httpmime-4.2.2.jar" />
+            <element id="file-copy" path="$PROJECT_DIR$/web/WEB-INF/lib/json-simple-1.1.1.jar" />
+            <element id="file-copy" path="$PROJECT_DIR$/web/WEB-INF/lib/log4j.jar" />
+          </element>
+        </element>
+        <element id="javaee-facet-resources" facet="trigger-test/web/Web" />
+      </root>
+    </artifact>
+  </component>
   <component name="CompilerConfiguration">
     <option name="DEFAULT_COMPILER" value="Javac" />
     <resourceExtensions />
@@ -172,7 +197,7 @@
   <component name="ProjectResources">
     <default-html-doctype>http://www.w3.org/1999/xhtml</default-html-doctype>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_6" assert-keyword="true" jdk-15="true" project-jdk-name="java 1.6" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_6" assert-keyword="true" jdk-15="true" project-jdk-name="1.6" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
   <component name="RegexUtilComponent" text="1900-01-01 2007/08/13 1900.01.01 1900 01 01 1900-01.01 1900 13 01 1900 02 31" flags="0" regex="(19|20)\d\d([- /.])(0[1-9]|1[012])\2(0[1-9]|[12][0-9]|3[01])" mode="0" />

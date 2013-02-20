@@ -10,21 +10,41 @@
         <servlet-class>com.serena.GitHubAntHillTriggerBridge</servlet-class>
     </servlet>
 
+    <servlet>
+        <servlet-name>ghjenkins</servlet-name>
+        <servlet-class>com.serena.GitHubJenkinsBridge</servlet-class>
+    </servlet>
+
     <servlet-mapping>
         <servlet-name>ghah</servlet-name>
         <url-pattern>/trigger</url-pattern>
     </servlet-mapping>
 
+    <servlet-mapping>
+        <servlet-name>ghjenkins</servlet-name>
+        <url-pattern>/github-webhook/</url-pattern>
+    </servlet-mapping>
+
     <servlet>
-        <servlet-name>log4j-init</servlet-name>
-        <servlet-class>com.serena.Log4jInit</servlet-class>
+        <servlet-name>props-init</servlet-name>
+        <servlet-class>com.serena.PropertiesInit</servlet-class>
 
         <init-param>
             <param-name>log4j-init-file</param-name>
             <param-value>WEB-INF/log4j.properties</param-value>
         </init-param>
 
+        <init-param>
+            <param-name>props-file</param-name>
+            <param-value>../classes/app.properties</param-value>
+        </init-param>
+
         <load-on-startup>1</load-on-startup>
     </servlet>
+
+    <servlet-mapping>
+        <servlet-name>props-init</servlet-name>
+        <url-pattern>/init/</url-pattern>
+    </servlet-mapping>
 
 </web-app>     

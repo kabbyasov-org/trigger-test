@@ -122,49 +122,41 @@ public final class GitHubAntHillTriggerBridge extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        if (needToProceed()) {
+            logDebug("Proceeding Anthill trigger...");
+            ghPayload = request.getParameter(PAYLOAD_REQUEST_PARAM_NAME);
+            logDebug("GitHub payload message:" + ghPayload);
+            System.out.println("Got request: " + ghPayload);
 
-        ghPayload = request.getParameter(PAYLOAD_REQUEST_PARAM_NAME);
-        logDebug("GitHub payload message:" + ghPayload);
-        System.out.println("Got request: " + ghPayload);
-
-        if (!"".equals(ghPayload)) {
-            try {
-                parseGHPayload();
-//                writer.println(ghRepositoryUrl);
-//                writer.println(ghBranch);
-            } catch (Exception e) {
-                logError("Error parsing request from GitHub", e);
-            }
-
-            if (!"".equals(ghRepositoryUrl) && !"".equals(ghBranch)) {
+            if (null != ghPayload && !"".equals(ghPayload)) {
                 try {
-                    int sleepTimeoutValue = 60;
-                    logDebug("Sleeping for " + sleepTimeoutValue + " seconds before notifying AntHill...");
-                    Thread.sleep(sleepTimeoutValue * 1000);
-                } catch (InterruptedException e) {
-                    logError("Sleep interrupted!", e);
+                    parseGHPayload();
+    //                writer.println(ghRepositoryUrl);
+    //                writer.println(ghBranch);
+                } catch (Exception e) {
+                    logError("Error parsing request from GitHub", e);
                 }
-                notifyAH();
+
+                if (!"".equals(ghRepositoryUrl) && !"".equals(ghBranch)) {
+                    try {
+                        int sleepTimeoutValue = 60;
+                        logDebug("Sleeping for " + sleepTimeoutValue + " seconds before notifying AntHill...");
+                        Thread.sleep(sleepTimeoutValue * 1000);
+                    } catch (InterruptedException e) {
+                        logError("Sleep interrupted!", e);
+                    }
+                    notifyAH();
+                }
+
             }
-
         }
-
-//        response.setContentType("text/html");
-//        PrintWriter writer = response.getWriter();
-//        writer.println("<html>");
-//        writer.println("<head>");
-//        writer.println("</head>");
-//        writer.println("<body bgcolor=white>");
-//
-//
-//
-//
-//        writer.println("ghRepositoryUrl: " + ghRepositoryUrl + "<br>");
-//        writer.println("</body>");
-//        writer.println("</html>");
-
-
     }
+
+
+    private boolean needToProceed() {
+        return Boolean.valueOf(AppProperties.getInstance().getProps().getProperty(AppProperties.SHOULD_RUN_ANTHILL_TRIGGER));
+    }
+
 }
 
 
