@@ -2,13 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="658e4d2f-2770-4f56-a5c1-cac3bdb9c3d1" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/serena/JsonSync.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/serena/Test.java" afterPath="$PROJECT_DIR$/src/com/serena/Test.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/trigger-test.iws" afterPath="$PROJECT_DIR$/trigger-test.iws" />
     </list>
     <ignored path="trigger-test.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="658e4d2f-2770-4f56-a5c1-cac3bdb9c3d1" time="1367223379234" ignored="false" />
+    <file path="/Dummy.txt" changelist="658e4d2f-2770-4f56-a5c1-cac3bdb9c3d1" time="1367223523581" ignored="false" />
     <file path="/GitHubAntHillTriggerBridge.java" changelist="658e4d2f-2770-4f56-a5c1-cac3bdb9c3d1" time="1361357703254" ignored="false" />
     <file path="D:/serenaSoft/automation/test/test_suites/PipelineDev.xml" changelist="658e4d2f-2770-4f56-a5c1-cac3bdb9c3d1" time="1356351190122" ignored="false" />
     <file path="D:/serenaSoft/automation/test/test_suites/RunTestsSmoke1.xml" changelist="658e4d2f-2770-4f56-a5c1-cac3bdb9c3d1" time="1356351124096" ignored="false" />
@@ -208,7 +207,7 @@
       <file leaf-file-name="Test.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/serena/Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="57" selection-start="1213" selection-end="1213" vertical-scroll-proportion="0.69215494">
+            <state line="41" column="16" selection-start="1214" selection-end="1214" vertical-scroll-proportion="0.69215494">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -901,7 +900,11 @@
       <created>1367223380566</created>
       <updated>1367223380566</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="test">
+      <created>1367223524724</created>
+      <updated>1367223524724</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1124,7 +1127,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/serena/Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="57" selection-start="1213" selection-end="1213" vertical-scroll-proportion="0.69215494">
+        <state line="41" column="16" selection-start="1214" selection-end="1214" vertical-scroll-proportion="0.69215494">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
