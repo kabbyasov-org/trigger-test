@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="658e4d2f-2770-4f56-a5c1-cac3bdb9c3d1" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/trigger-test.iws" afterPath="$PROJECT_DIR$/trigger-test.iws" />
     </list>
     <ignored path="trigger-test.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="658e4d2f-2770-4f56-a5c1-cac3bdb9c3d1" time="1367226268093" ignored="false" />
+    <file path="/Dummy.txt" changelist="658e4d2f-2770-4f56-a5c1-cac3bdb9c3d1" time="1367226318265" ignored="false" />
     <file path="/GitHubAntHillTriggerBridge.java" changelist="658e4d2f-2770-4f56-a5c1-cac3bdb9c3d1" time="1361357703254" ignored="false" />
     <file path="D:/serenaSoft/automation/test/test_suites/PipelineDev.xml" changelist="658e4d2f-2770-4f56-a5c1-cac3bdb9c3d1" time="1356351190122" ignored="false" />
     <file path="D:/serenaSoft/automation/test/test_suites/RunTestsSmoke1.xml" changelist="658e4d2f-2770-4f56-a5c1-cac3bdb9c3d1" time="1356351124096" ignored="false" />
@@ -203,13 +204,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Test.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Test.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/serena/Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="68" selection-start="468" selection-end="468" vertical-scroll-proportion="0.48425788">
+            <state line="17" column="45" selection-start="399" selection-end="399" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3" column="66" selection-start="8" selection-end="8" vertical-scroll-proportion="0.07646177">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -831,7 +841,11 @@
       <created>1367226274743</created>
       <updated>1367226274743</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="2">
+      <created>1367226319475</created>
+      <updated>1367226319475</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -951,16 +965,6 @@
     </buildFile>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Serena/Common/tomcat/6.0/lib/catalina.jar!/org/apache/catalina/core/ContainerBase.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="117" column="38" selection-start="5408" selection-end="5408" vertical-scroll-proportion="0.7925234" />
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Serena/Common/tomcat/6.0/lib/catalina.jar!/org/apache/catalina/core/StandardContext.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="629" column="16" selection-start="26992" selection-end="26992" vertical-scroll-proportion="0.33271027" />
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Serena/Common/tomcat/6.0/lib/catalina.jar!/org/apache/catalina/core/StandardWrapper.class">
       <provider selected="true" editor-type-id="text-editor">
         <state line="123" column="46" selection-start="5321" selection-end="5321" vertical-scroll-proportion="0.34766355" />
@@ -1053,12 +1057,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/trigger-test.iws">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="55" selection-start="586" selection-end="586" vertical-scroll-proportion="0.23394495">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/serena/Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="68" selection-start="468" selection-end="468" vertical-scroll-proportion="0.48425788">
+        <state line="17" column="45" selection-start="399" selection-end="399" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="66" selection-start="8" selection-end="8" vertical-scroll-proportion="0.07646177">
+          <folding />
         </state>
       </provider>
     </entry>
