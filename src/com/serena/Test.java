@@ -39,6 +39,7 @@ public class Test {
         CharsetEncoder asciiEncoder = Charset.forName(Charset."US-ASCII").newEncoder();
 
         System.out.println(asciiEncoder.canEncode(str));
+        // test
 
     }
 

@@ -4,12 +4,11 @@
     <list default="true" id="658e4d2f-2770-4f56-a5c1-cac3bdb9c3d1" name="Default" comment="">
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/serena/JsonSync.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/serena/Test.java" afterPath="$PROJECT_DIR$/src/com/serena/Test.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/trigger-test.ipr" afterPath="$PROJECT_DIR$/trigger-test.ipr" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/trigger-test.iws" afterPath="$PROJECT_DIR$/trigger-test.iws" />
     </list>
     <ignored path="trigger-test.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="658e4d2f-2770-4f56-a5c1-cac3bdb9c3d1" time="1367223353149" ignored="false" />
+    <file path="/Dummy.txt" changelist="658e4d2f-2770-4f56-a5c1-cac3bdb9c3d1" time="1367223379234" ignored="false" />
     <file path="/GitHubAntHillTriggerBridge.java" changelist="658e4d2f-2770-4f56-a5c1-cac3bdb9c3d1" time="1361357703254" ignored="false" />
     <file path="D:/serenaSoft/automation/test/test_suites/PipelineDev.xml" changelist="658e4d2f-2770-4f56-a5c1-cac3bdb9c3d1" time="1356351190122" ignored="false" />
     <file path="D:/serenaSoft/automation/test/test_suites/RunTestsSmoke1.xml" changelist="658e4d2f-2770-4f56-a5c1-cac3bdb9c3d1" time="1356351124096" ignored="false" />
@@ -22,7 +21,7 @@
     <file path="D:/serenaSoft/urban-deploy/build.xml" changelist="658e4d2f-2770-4f56-a5c1-cac3bdb9c3d1" time="1365582700298" ignored="false" />
     <file path="/build.xml" changelist="658e4d2f-2770-4f56-a5c1-cac3bdb9c3d1" time="1357745092973" ignored="false" />
     <file path="/fragment.java" changelist="658e4d2f-2770-4f56-a5c1-cac3bdb9c3d1" time="1366708055789" ignored="false" />
-    <file path="/Test.java" changelist="658e4d2f-2770-4f56-a5c1-cac3bdb9c3d1" time="1366298191223" ignored="false" />
+    <file path="/Test.java" changelist="658e4d2f-2770-4f56-a5c1-cac3bdb9c3d1" time="1367223392300" ignored="false" />
     <file path="/AutoIntegrationTask.java" changelist="658e4d2f-2770-4f56-a5c1-cac3bdb9c3d1" time="1356529337826" ignored="false" />
     <file path="D:/github-test/src/com/serena/GitHubAntHillTriggerBridge.java" changelist="658e4d2f-2770-4f56-a5c1-cac3bdb9c3d1" time="1356529265650" ignored="false" />
     <file path="/AutomationPluginLoader.java" changelist="658e4d2f-2770-4f56-a5c1-cac3bdb9c3d1" time="1357651602636" ignored="false" />
@@ -102,7 +101,7 @@
   </component>
   <component name="DebuggerManager">
     <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
-      <breakpoint url="file://$PROJECT_DIR$/src/com/serena/Test.java" line="115" class="com.serena.Test" package="com.serena">
+      <breakpoint url="file://$PROJECT_DIR$/src/com/serena/Test.java" line="116" class="com.serena.Test" package="com.serena">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -117,7 +116,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/serena/Test.java" line="126" class="com.serena.Test" package="com.serena">
+      <breakpoint url="file://$PROJECT_DIR$/src/com/serena/Test.java" line="127" class="com.serena.Test" package="com.serena">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -209,7 +208,7 @@
       <file leaf-file-name="Test.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/serena/Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="62" column="85" selection-start="1766" selection-end="1766" vertical-scroll-proportion="1.0466733">
+            <state line="41" column="57" selection-start="1213" selection-end="1213" vertical-scroll-proportion="0.69215494">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -250,8 +249,8 @@
         <option value="$PROJECT_DIR$/src/com/serena/GitHubJenkinsBridge.java" />
         <option value="$PROJECT_DIR$/src/com/serena/GitHubAntHillTriggerBridge.java" />
         <option value="$PROJECT_DIR$/src/com/serena/UnicodeUtil.java" />
-        <option value="$PROJECT_DIR$/src/com/serena/Test.java" />
         <option value="$PROJECT_DIR$/src/com/serena/JsonSync.java" />
+        <option value="$PROJECT_DIR$/src/com/serena/Test.java" />
       </list>
     </option>
   </component>
@@ -898,7 +897,11 @@
       <created>1361360261548</created>
       <updated>1361360261548</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="test">
+      <created>1367223380566</created>
+      <updated>1367223380566</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -913,6 +916,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32720232" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3281704" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="RESTClient" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -931,7 +935,6 @@
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32913843" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3281704" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39980638" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Regex" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -979,7 +982,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="added properties" />
+    <option name="LAST_COMMIT_MESSAGE" value="test" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -997,6 +1000,7 @@
     <MESSAGE value="Merge remote-tracking branch 'origin/master' into test2&#10;&#10;Conflicts:&#10;&#9;web/index.jsp&#10;" />
     <MESSAGE value="1" />
     <MESSAGE value="added properties" />
+    <MESSAGE value="test" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1033,7 +1037,9 @@
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.6.0_34/src.zip!/java/util/Properties.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="417" column="0" selection-start="17132" selection-end="17132" vertical-scroll-proportion="0.33333334" />
+        <state line="417" column="0" selection-start="17132" selection-end="17132" vertical-scroll-proportion="0.33333334">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/log4j.properties">
@@ -1043,7 +1049,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/trigger-test.ipr">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="172" column="51" selection-start="11004" selection-end="11004" vertical-scroll-proportion="0.0" />
+        <state line="172" column="51" selection-start="11004" selection-end="11004" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/serena/AppProperties.java">
@@ -1116,7 +1124,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/serena/Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="85" selection-start="1766" selection-end="1766" vertical-scroll-proportion="1.0466733">
+        <state line="41" column="57" selection-start="1213" selection-end="1213" vertical-scroll-proportion="0.69215494">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
