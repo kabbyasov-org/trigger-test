@@ -23,7 +23,7 @@ public final class GitHubJenkinsBridge extends HttpServlet {
     static private final Logger log = Logger.getLogger(GitHubJenkinsBridge.class);
 
     private static final String PAYLOAD_REQUEST_PARAM_NAME = "payload";
-    private static final String JENKINS_URL = "http://ua007464:8081/github-webhook/";
+    private static final String JENKINS_URL = "http://stl-dev-srabm:8081/github-webhook/";
 
     private String ghPayload = "";
 
