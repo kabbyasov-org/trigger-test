@@ -29,8 +29,6 @@ public class Test {
 //            System.out.println(list);
 //        }
 
-//        writeOutput("русская строка");
-//        setupLocation("русский текст");
 //        getInstalledProperties();
 //        getMajorVersion();
 //        try {
