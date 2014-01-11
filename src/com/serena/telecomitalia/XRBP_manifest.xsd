@@ -1,0 +1,47 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="XRBPManifest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Area" maxOccurs="unbounded" minOccurs="0">
+          <xs:annotation>
+            <xs:documentation>*********************************************************************  La la propedeuticità si ottiene con l'ordine progressivo delle "Aree"  DB_STR 1,CAT 2,UCM 3,ISA 4,PRB 5,PBS 6,UMS 7,RBA 8,IBA 9,TOOL 10.      *********************************************************************</xs:documentation>
+          </xs:annotation>
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Elements">
+                <xs:annotation>
+                  <xs:documentation>Lista in ordine di esecuzione degli scripts da eseguire per DB  Lista in ordine di esecuzione degli scripts da eseguire per Catalog  Lista Eseguibili da rilasciare</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Element" maxOccurs="unbounded" minOccurs="0">
+                      <xs:annotation>
+                        <xs:documentation>Numero progressivo di esecuzione, Path PVCS, Script  Numero progressivo di esecuzione, Path PVCS, Script, Istanza  Rilascio singolo o multiplo</xs:documentation>
+                      </xs:annotation>
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute type="xs:byte" name="Nbr" use="optional"/>
+                            <xs:attribute type="xs:string" name="PVCS_Path" use="optional"/>
+                            <xs:attribute type="xs:string" name="Script" use="optional"/>
+                            <xs:attribute type="xs:string" name="Istanza" use="optional"/>
+                            <xs:attribute type="xs:string" name="Eseguibile" use="optional"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute type="xs:string" name="Name" use="optional"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute type="xs:string" name="Status"/>
+      <xs:attribute type="xs:float" name="ManifestVersion"/>
+      <xs:attribute type="xs:string" name="Write"/>
+      <xs:attribute type="xs:string" name="Date"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
