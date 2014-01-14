@@ -24,18 +24,6 @@ import java.util.Properties;
 
 public class Test {
     public static void main(String[] args) {
-//        List<String> list = null;
-//        for (String s : list) {
-//            System.out.println(list);
-//        }
-
-//        getInstalledProperties();
-//        getMajorVersion();
-//        try {
-//            System.out.println(FileUtils.compareDirectoryContents("c:/test", "c:/test2"));
-//        } catch (IOException e) {
-//            System.out.println(e);
-//        }
 
         // test2
 
@@ -59,15 +47,6 @@ public class Test {
 //        System.out.println(test.getVar1());
 ////        System.exit(0);
 //
-//        Child child = new Child();
-//        child.setVar1("petya");
-//        child.setVar3("kolya");
-//
-//        System.out.println(child.getVar1());
-//        System.out.println(child.getVar3());
-
-//        System.out.println(child.getVar1());
-
 
 //        Project project = new Project();
 //        Chown chown = new Chown();
